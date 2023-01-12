@@ -1,7 +1,9 @@
 import os, requests, sys, time
 
 from datetime import datetime
+from colorama import Fore, init
 
+init()
 
 class Capture:
     def __init__(self, protocol, filter) -> None:

@@ -66,5 +66,16 @@ class Capture:
                                 self.Total += 1
                             else:
                                 pass
+                        else:
+                            RealIP = IP.split(":")[0]
+                            if Port == self.filter:
+                                self.display_text(self.Total, 44, F"{Protocol}  ")
+                                self.display_text(self.Total, 12, F"{RealIP}  ")
+                                self.display_text(self.Total, 29, F"{Port}    ")
+                                self.display_text(self.Total, 58, F"{COLOR}{State}{Fore.WHITE}  ")
+                                self.display_text(self.Total, 2, F"{PurpleColor}{datetime.now().hour}:{datetime.now().minute}:{datetime.now().second}{Fore.WHITE} ")
+                                self.Total += 1
+                            else:
+                                pass
             except IndexError:
                 pass

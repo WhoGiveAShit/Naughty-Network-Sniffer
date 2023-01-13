@@ -40,9 +40,9 @@ else:
     if FirstArg == "-h":
         print('''python main.py -h || Displays this command\npython main.py || To listen for all ips with no filter\npython main.py <discord> || To show current discord connections IE: Voice chats''')
         sys.exit()
-    elif FirstArg == "discord":
+    elif FirstArg == "fivem":
         print(UI)
         while True:
             time.sleep(5)
-            D = Capture("tcp", "discord")
+            D = Capture("tcp", "fivem")
             D.display_conns()

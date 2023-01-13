@@ -28,10 +28,12 @@ UI = '''          ┌───────────────┬───�
 │         │                                                            │
 └─────────┴────────────────────────────────────────────────────────────┘'''
 
+
+
+
 if len(sys.argv) < 2:
     print(UI)
     while True:
-        time.sleep(1)
         D = Capture("tcp", "none")
         D.display_conns()
 else:
@@ -42,7 +44,6 @@ else:
     elif FirstArg == "fivem":
         print(UI)
         while True:
-            time.sleep(5)
             D = Capture("tcp", "fivem")
             D.display_conns()
     elif FirstArg == "portfilter":
@@ -50,4 +51,14 @@ else:
         SecongArg = sys.argv[2]
         while True:
             D = Capture("tcp", SecongArg)
+            D.display_conns()
+    elif FirstArg == "ignorehttp":
+        print(UI)
+        while True:
+            D = Capture("tcp", "ignorehttp")
+            D.display_conns()
+    elif FirstArg == "gta":
+        print(UI)
+        while True:
+            D = Capture("udp", "gta")
             D.display_conns()

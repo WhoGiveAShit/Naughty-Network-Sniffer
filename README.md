@@ -4,3 +4,10 @@ A windows network sniffer that will allow you to filter ips out to certain orgs 
 
 
 ![alt text](https://cdn.discordapp.com/attachments/828153883309244440/1063428836433342474/image.png)
+
+
+**Arguments**
+
+python main.py || To listen for all ips with no filter
+python main.py fivem || To show current fivem connections IE: Server Connections
+python main.py portfilter 443 || To filter a certain port and ignore the others

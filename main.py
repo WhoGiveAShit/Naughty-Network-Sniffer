@@ -38,7 +38,7 @@ else:
     FirstArg = sys.argv[1]
 
     if FirstArg == "-h":
-        print('''python main.py -h || Displays this command\npython main.py || To listen for all ips with no filter\npython main.py <discord> || To show current discord connections IE: Voice chats''')
+        print('''python main.py -h || Displays this command\npython main.py || To listen for all ips with no filter\npython main.py <fivem> || To show current fivem connections IE: Server Connections''')
         sys.exit()
     elif FirstArg == "fivem":
         print(UI)

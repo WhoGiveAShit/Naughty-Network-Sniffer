@@ -10,4 +10,4 @@ A windows network sniffer that will allow you to filter ips out to certain orgs 
 
 python main.py || To listen for all ips with no filter\
 python main.py fivem || To show current fivem connections IE: Server Connections\
-python main.py portfilter 443 || To filter a certain port and ignore the others
+python main.py portfilter 443 || To filter a certain port and ignore the others\

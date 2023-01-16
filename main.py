@@ -1,7 +1,14 @@
 import time
 
 from incoming.connections import *
-os.system("cls")
+
+
+Platform = os.name
+if Platform == "nt":
+    os.system("cls")
+else:
+    os.system("clear")
+
 
 UI = '''          ┌───────────────┬────────────┬───────────────┬───────────────┐
           │               │            │               │               │
@@ -29,8 +36,6 @@ UI = '''          ┌───────────────┬───�
 └─────────┴────────────────────────────────────────────────────────────┘'''
 
 
-
-
 if len(sys.argv) < 2:
     print(UI)
     while True:
@@ -42,10 +47,8 @@ else:
         print('''python main.py -h || Displays this command\npython main.py || To listen for all ips with no filter\npython main.py <fivem> || To show current fivem connections IE: Server Connections''')
         sys.exit()
     elif FirstArg == "fivem":
-        print(UI)
-        while True:
-            D = Capture("tcp", "fivem")
-            D.display_conns()
+        D = Capture("tcp", "fivem")
+        D.display_conns()
     elif FirstArg == "portfilter":
         print(UI)
         SecongArg = sys.argv[2]
@@ -56,9 +59,4 @@ else:
         print(UI)
         while True:
             D = Capture("tcp", "ignorehttp")
-            D.display_conns()
-    elif FirstArg == "gta":
-        print(UI)
-        while True:
-            D = Capture("udp", "gta")
             D.display_conns()

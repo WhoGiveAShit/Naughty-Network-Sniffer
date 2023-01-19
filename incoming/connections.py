@@ -45,15 +45,8 @@ class Capture:
                 else:
                     if Protocol!="TCP":
                         pass
-                    if "*" in IP:
-                        pass
-                    if "[" in IP:
-                        pass
-                    elif "0.0.0.0" in IP:
-                        pass
-                    elif "127.0.0.1" in IP:
-                        pass
-                    elif "192.168.0.1" in IP:
+                    listt = ["*", "[", "0.0.0.0", "127.0.0.1", "192.168.0.1"]
+                    if any(e in IP for e in listt):
                         pass
                     else:
                         if State == "TIME_WAIT":
